@@ -1,7 +1,7 @@
 import time
 
 from selenium import webdriver
-from Libss.amazon import Amazon
+from Libs.amazon import Amazon
 
 booksToAdd = ["Experiences of Test Automation: Case Studies of Software Test Automation",
               "Agile Testing: A Practical Guide for Testers and Agile Teams",
@@ -12,7 +12,7 @@ driver = webdriver.Chrome()
 
 amazon = Amazon(driver)
 amazon.go_to("https://www.amazon.com/")
-amazon.sign_in("pass", "username")
+amazon.sign_in("smirad91@gmail.com", "smirad91")
 amazon.add_to_cart_paperback(booksToAdd)
 amazon.open_cart()
 amazon.save_for_later("Experiences of Test Automation")
